@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "myaks1-1083"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "myaks1-1083"
+    spec:
+      containers:
+        - name: "myaks1-1083"
+          image: "demoregistrymary.azurecr.io/myaks1"
+          ports:
+          - containerPort: 80
